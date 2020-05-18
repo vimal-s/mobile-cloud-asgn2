@@ -43,7 +43,7 @@ public class AnEmptyController {
 	 * 
 	 */
 	
-	@RequestMapping(value="/go",method=RequestMethod.GET)
+	@RequestMapping(value="/video",method=RequestMethod.GET)
 	public @ResponseBody String goodLuck(){
 		return "Good Luck!";
 	}

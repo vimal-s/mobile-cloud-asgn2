@@ -69,3 +69,14 @@ dependencies {
 }
 
 mainClassName = 'org.magnum.dataup.model.Application'
+//=======
+//task wrapper(type: Wrapper) {
+//    gradleVersion = '5.0'
+//}
+
+//wrapper {
+//    gradleVersion = '5.0'
+//}
+
+//mainClassName = 'org.magnum.mobilecloud.video.Application'
+//>>>>>>> Stashed changes
