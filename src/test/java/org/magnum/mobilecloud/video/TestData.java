@@ -13,38 +13,37 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * into JSON using Jackson, which is the format that the
  * VideoSvc controller is going to expect data in for
  * integration testing.
- * 
- * @author jules
  *
+ * @author jules
  */
 public class TestData {
 
-	private static final ObjectMapper objectMapper = new ObjectMapper();
-	
-	/**
-	 * Construct and return a Video object with a
-	 * random name, url, and duration.
-	 * 
-	 * @return
-	 */
-	public static Video randomVideo() {
-		// Information about the video
-		// Construct a random identifier using Java's UUID class
-		String id = UUID.randomUUID().toString();
-		String title = "Video-"+id;
-		String url = "http://coursera.org/some/video-"+id;
-		long duration = 60 * (int)Math.rint(Math.random() * 60) * 1000; // random time up to 1hr
-		return new Video(title, url, duration, 0);
-	}
-	
-	/**
-	 *  Convert an object to JSON using Jackson's ObjectMapper
-	 *  
-	 * @param o
-	 * @return
-	 * @throws Exception
-	 */
-	public static String toJson(Object o) throws Exception{
-		return objectMapper.writeValueAsString(o);
-	}
+    private static final ObjectMapper objectMapper = new ObjectMapper();
+
+    /**
+     * Construct and return a Video object with a
+     * random name, url, and duration.
+     *
+     * @return
+     */
+    public static Video randomVideo() {
+        // Information about the video
+        // Construct a random identifier using Java's UUID class
+        String id = UUID.randomUUID().toString();
+        String title = "Video-" + id;
+        String url = "http://coursera.org/some/video-" + id;
+        long duration = 60 * (int) Math.rint(Math.random() * 60) * 1000; // random time up to 1hr
+        return new Video(title, url, duration, 0);
+    }
+
+    /**
+     * Convert an object to JSON using Jackson's ObjectMapper
+     *
+     * @param o
+     * @return
+     * @throws Exception
+     */
+    public static String toJson(Object o) throws Exception {
+        return objectMapper.writeValueAsString(o);
+    }
 }

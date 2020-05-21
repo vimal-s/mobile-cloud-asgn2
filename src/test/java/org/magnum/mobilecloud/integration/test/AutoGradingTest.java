@@ -239,8 +239,9 @@ public class AutoGradingTest {
 
 		try {
 			// Like the video again.
+//			System.out.println("kkkk");
 			readWriteVideoSvcUser1.likeVideo(getInvalidVideoId());
-
+//			System.out.println("kkkk");
 			fail("The server let us like a video that doesn't exist without returning a 404.");
 		} catch (RetrofitError e) {
 			// Make sure we got a 400 Bad Request
@@ -265,7 +266,7 @@ public class AutoGradingTest {
 		names[2] = "The Plate";
 
 		// Create three random videos, but use the unique names
-		ArrayList<Video> videos = new ArrayList<Video>();
+		ArrayList<Video> videos = new ArrayList<>();
 
 		for (int i = 0; i < names.length; ++i) {
 			videos.add(TestData.randomVideo());
@@ -308,11 +309,11 @@ public class AutoGradingTest {
 		durations[2] = 9;
 
 		// Create three random videos, but use unique durations
-		ArrayList<Video> videos = new ArrayList<Video>();
+		ArrayList<Video> videos = new ArrayList<>();
 
 		for (int i = 0; i < durations.length; ++i) {
 			videos.add(TestData.randomVideo());
-			videos.get(i).setDuration(durations[0]);
+			videos.get(i).setDuration(durations[i]);			// change this to 0 later was default
 		}
 
 		// Add all the videos to the server

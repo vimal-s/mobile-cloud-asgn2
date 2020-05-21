@@ -64,10 +64,14 @@ dependencies {
     compile(":mobilecloud.handin:1.0.0")
     compile(":autograder.handin:1.0.0")
     compile(":autograder.spec:1.0.0")
-    
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools
+//    compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.1.0.RELEASE'
+
     testCompile("junit:junit:4.13")
 }
 
+//<<<<<<< Updated upstream
 mainClassName = 'org.magnum.dataup.model.Application'
 //=======
 //task wrapper(type: Wrapper) {

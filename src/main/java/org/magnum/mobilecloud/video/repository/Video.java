@@ -38,7 +38,7 @@ public class Video {
 	private long likes;
 	
 	@ElementCollection
-	private Set<String> likedBy = new HashSet<String>();
+	private Set<String> likedBy = new HashSet<>();
 	
 	public Video() {
 	}
